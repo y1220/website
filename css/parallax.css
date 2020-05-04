@@ -1,0 +1,85 @@
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: lightyellow;
+    font-size: 24px;
+    padding: 25px;
+}
+
+.parallax{
+    background: url(kousaku/youkosoperfect.png) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 800px;
+}
+
+.parallax2{
+    background: url(kousaku/2017_06_06_10.jpg) no-repeat center;
+    background-size: 100%;
+    background-attachment: fixed;
+    height: 800px;
+}
+
+p {
+    color: royalblue;
+}
+
+p:hover {
+    opacity: 0.5;
+}
+
+.parallax3{
+    background: url(kousaku/2017_06_06_14.jpg) no-repeat center;
+    background-size: 100%;
+    background-attachment: fixed;
+    height: 800px;
+}
+
+.parallax4{
+    background: url(kousaku/2017_06_06_2.jpg) no-repeat center;
+    background-size: 100%;
+    background-attachment: fixed;
+    height: 900px;
+}
+
+.parallax5{
+    background: url(kousaku/2017_06_06_3.jpg) no-repeat center;
+    background-size: 80%;
+    background-attachment: fixed;
+    height: 700px;
+}
+
+.parallax6{
+    background: url(kousaku/2017_06_06_34.jpg) no-repeat left;
+    background-size: 80%;
+    background-attachment: fixed;
+    height: 500px;
+}
+
+.parallax7{
+    background: url(kousaku/2017_06_06_6.jpg) no-repeat right;
+    background-size: 80%;
+    background-attachment: fixed;
+    height: 500px;
+}
+
+.parallax8{
+    background: url(kousaku/2017_06_06_7.jpg) no-repeat left;
+    background-size: 70%;
+    background-attachment: fixed;
+    height: 500px;
+}
+
+.parallax9{
+    background: url(kousaku/2017_06_06_8.jpg) no-repeat right;
+    background-size: 70%;
+    background-attachment: fixed;
+    height: 500px;
+}
+
+.parallax10{
+    background: url(kousaku/2017_06_06_9.jpg) no-repeat center;
+    background-size: 80%;
+    background-attachment: fixed;
+    height: 900px;
+}

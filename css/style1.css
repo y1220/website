@@ -1,0 +1,372 @@
+@charset "utf-8";
+/* ------------------------------------------------ */
+/* 1.共通
+/* ------------------------------------------------ */
+
+/* ボックスサイズの計算方法を指定 */
+* {
+    box-sizing: border-box;
+}
+
+/*ページ全体の基本スタイル*/
+body {
+    color: darkblue;
+    font-size: 14px;
+    font-family: fantasy;
+    line-height: 1.6;
+}
+
+/*リンクの基本スタイル*/
+a {
+    color: cadetblue;
+    transition: 0.5s;
+}
+
+/*リンクにマウスが乗ったときのスタイル*/
+a:hover {
+    opacity: 0.7;
+}
+
+/*画面の基本スタイル*/
+img {
+    vertical-align: bottom;
+}
+
+/*3等分で横並び*/
+.col-4 {
+    width: 33.33%;
+}
+
+/*写真のフレーム*/
+.photoframe {
+    border: 1px solid darkblue;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px darkblue;
+    padding: 15px;
+}
+
+/* ------------------------------------------------ */
+/* 2.レイアウト
+/* ------------------------------------------------ */
+
+/* ページ全体を囲む枠 */
+#wrapper {
+    margin: 0 auto;
+    width: 90%;
+}
+
+/*--------------------------------------------------------------------------------------*/
+/*3.ヘッダー
+/*--------------------------------------------------------------------------------------*/
+
+/*エリア外枠のスタイル*/
+header{
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+
+/*見出しのスタイル*/
+h1{
+    color: salmon;
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+/*言語切り替えのスタイル*/
+.en {
+    text-align: right;
+}
+
+.ja {
+    text-align: right;
+}
+
+/*ロゴのスタイル*/
+#header-logo img {
+    width:100%;
+    margin-bottom: 25px;
+}
+
+/*--------------------------------------------------------------------------------------*/
+/*4.グローバルナビゲーション
+/*--------------------------------------------------------------------------------------*/
+
+/*エリア外枠のスタイル*/
+#gNav {
+    margin-bottom: 25px;
+}
+
+/*メニューリストを囲む枠*/
+#gNav ul {
+    display: flex
+}
+
+/*メニューリストの共通スタイル*/
+#gNav li {
+    border-left: 1px solid darkorange;
+    height: 45px;
+    text-align: center;
+    width: 25%;
+}
+
+/*一番右のメニューリストのスタイル*/
+#gNav li:last-child {
+    border-right: 1px solid darkorange;
+}
+
+/*メニューのリンクスタイル*/
+#gNav a {
+    color: darkblue;
+    display: block;
+    font-size: 11px;
+    height: 45px;
+    line-height: 2;
+    text-decoration: none;
+}
+
+/*メニューにマウスを乗せたときのスタイル*/
+#gNav a:hover {
+    background-color: beige;
+}
+
+/*メニューの英文字スタイル*/
+#gNav a span {
+    color: cadetblue;
+    display: block;
+    font-family: arial;
+    font-size: 10px;
+}
+/*現在ページのメニュースタイル*/
+#gNav .current-menu-item a, #gNav .current-menu-item a span {
+    background-color: bisque;
+    color: brown;
+}
+
+
+
+
+/*--------------------------------------------------------------------------------------*/
+/*5.コンテンツ
+/*--------------------------------------------------------------------------------------*/
+
+/*エリア外枠のスタイル*/
+#contents {
+    margin-bottom: 60px;
+}
+
+/*--------------------------------------------------------------------------------------*/
+/*6.フッター
+/*--------------------------------------------------------------------------------------*/
+
+/*エリア外枠のスタイル*/
+#footer {
+    background: darkorange;
+    color: cornsilk;
+    padding: 25px;
+    display: flex;
+    
+}
+
+/*エリア左側のボックス*/
+#footer-left {
+    width:50%;
+}
+
+/*エリア右側のボックス*/
+#footer-right {
+    width: 50%;
+}
+
+/*ロゴ*/
+#footer-logo img {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    width: 50%;
+    height: 65px;
+}
+
+/*お問い合わせのついて*/
+#about-contact {
+    font-size: 15px;
+}
+
+/*著作権表記*/
+#copyright {
+    text-align: right;
+    display: block;
+}
+
+/*--------------------------------------------------------------------------------------*/
+/*7.フッターナビゲーション
+/*--------------------------------------------------------------------------------------*/
+
+/*エリア外枠のスタイル*/
+#fNav {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    margin-left: 50px;
+}
+
+/*メニューリストを囲む枠*/
+#fNav ul {
+    display: inline-flex;
+    width: 100%;
+    margin-left: 0;
+    text-align: right;
+    justify-content: flex-end;
+}
+
+/*メニューリストの共通スタイル*/
+#fNav li {
+    padding: 0 15px;
+    border-right: 1px solid cornsilk;
+    text-align:right;
+    
+}
+
+/*一番最後のメニュー*/
+#fNav li:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+/*メニューリンクの共通スタイル*/
+#fNav a {
+    color: cornsilk;
+    text-decoration: none;
+}
+
+/*メニューリンクにマウスを乗せたときのスタイル*/
+
+/*--------------------------------------------------------------------------------------*/
+
+#fNav a:hover {
+    background-color: bisque;
+    color: darkblue;
+    opacity: 1;
+}
+
+/*8.ホーム専用スタイル
+/*--------------------------------------------------------------------------------------*/
+
+/*①エリア内枠のスタイル*/
+#contents .inner {
+    margin-bottom: 25px;
+}
+
+
+/*②メイン画像*/
+#main_visual {
+    width: 100%;
+}
+
+
+/*③中見出し*/
+h2 {
+    background-color: darkorange;
+    color: cornsilk;
+    font-size: 18px;
+    margin-bottom: 25px;
+    padding: 0.5em 1em;
+}
+
+
+/*④経験を未来につなげて*/
+#article {
+    
+}
+
+/*⑤一緒にあそぼうの枠*/
+#playing {
+    display: flex;
+}
+
+/*⑥三等分で横並び*/
+.col-4 {
+    width: 33.33%;
+}
+
+/*⑦一緒にあそぼうのボックス*/
+play-box col-4 {
+    padding: 0 25px;
+    margin-bottom: 40px;
+}
+
+/*⑧小見出し*/
+h3 {
+    border: 1px solid darkblue;
+    border-radius: 100px;
+    box-shadow: 1px 1px 1px darkblue;
+    font-weight: bold;
+    margin-bottom: 25px;
+    padding: 0.2em 1em;
+}
+
+/*⑨各々(ゲーム企画、工作、スポーツ)の見出し*/
+.play-box h3 {
+    text-align: center;
+}
+
+
+/*⑩各々の画像*/
+.play-box img {
+    margin-bottom: 25px;
+    width: 100%;
+    border-radius: 25%;
+}
+
+
+
+
+
+/*--------------------------------------------------------------------------------------*/
+/*9.写真ページ専用スタイル
+/*--------------------------------------------------------------------------------------*/
+
+#picture-left img {
+    width: 100%;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+#picture-left h3 {
+    width: 100%;
+    text-align: center
+}
+
+#picture-right img {
+    width: 100%;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+#picture-right h3 {
+    width: 100%;
+    text-align: center
+}
+
+#about-pic {
+    margin-bottom: 25px;
+}
+
+/*--------------------------------------------------------------------------------------*/
+/*10.映像ページ専用スタイル
+/*--------------------------------------------------------------------------------------*/
+
+#contents video {
+    width: 100%;
+}
+
+/*--------------------------------------------------------------------------------------*/
+/*11.プライバシーポリシーページ専用スタイル
+/*--------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------------*/
+/*12.お問い合わせページ専用スタイル
+/*--------------------------------------------------------------------------------------*/
+
+#mail-form {
+    width: 100%;
+    text-align: center;
+}

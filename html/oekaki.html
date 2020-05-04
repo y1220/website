@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+   <head>
+        <meta charset="UTF-8">
+        <title>oekaki</title>
+
+       <style>
+           #canvas {
+               background-color: beige;
+           }
+           
+           #btn {
+               position: absolute;
+               top: 10px;
+               left: 10px;
+               width: 80px;
+               height: 50px;
+           }
+       </style>
+       
+ 
+       
+       <script type="text/javascript">
+           function saveIt() {
+    var myDrawing = document.getElementById("canvas");
+    var drawingString = myDrawing.toDataURL("image/png");
+    var postData = "canvasData="+drawingString;
+    var ajax = new XMLHttpRequest();
+    ajax.open("POST",'oekaki.php',true);
+    ajax.setRequestHeader('Content-Type','canvas/upload');
+    ajax.onreadystatechange=function()
+    {
+        if (ajax.readyState == 4)
+            {alert("image saved");}
+    }
+    ajax.send(postData);
+}
+       </script>
+    </head>
+
+   <body>
+        <button id="btn">clear</button>
+        <canvas id="canvas"></canvas>
+        <script src="oekaki.js"></script>
+        <php src="oekaki.php"></php>
+        
+        <script>
+var a = document.querySelector("canvas"),
+    c = a.getContext("2d");
+
+a.ontouchstart = function (e) {
+  e.preventDefault();
+  c.moveTo(e.touches[0].pageX, e.touches[0].pageY);
+};
+
+a.ontouchmove = function (e) {
+  c.lineTo(e.touches[0].pageX, e.touches[0].pageY);
+  c.stroke();
+};
+             </script>
+       <div>
+           <button onClick="saveIt();">Save Image</button>
+       </div>
+        
+    </body>
+</html>

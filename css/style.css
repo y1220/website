@@ -1,0 +1,589 @@
+@charset "utf-8";
+/* ------------------------------------------------ */
+/* 1.共通
+/* ------------------------------------------------ */
+
+/* ボックスサイズの計算方法を指定 */
+* {
+	box-sizing: border-box;
+}
+
+/* ページ全体の基本スタイル */
+body {
+	color: #4d4d4d;
+	font-size: 14px;
+	font-family: monospace;
+	line-height: 1.6;
+}
+
+/* 段落の基本スタイル */
+p {
+	padding-bottom: 1.5em;
+}
+
+/* 2等分で横並び */
+.col-6 {
+	width: 50%;
+}
+
+/* 3等分で横並び */
+.col-4 {
+	width: 33.33%;
+}
+
+/* リンクの基本スタイル */
+a {
+	color: #007de1;
+	transition: 0.5s;
+}
+
+/* リンクにマウスが乗ったときのスタイル */
+a:hover {
+	opacity: 0.7;
+}
+
+/* 画像の基本スタイル */
+img {
+	vertical-align: bottom;
+}
+
+/* 写真のフレーム */
+.photoframe {
+	border: 1px solid #eeeeee;
+	border-radius: 4px;
+	box-shadow: 1px 1px 1px #999999;
+	padding: 15px;
+}
+
+/* ------------------------------------------------ */
+/* 2.レイアウト
+/* ------------------------------------------------ */
+
+/* ページ全体を囲む枠 */
+#wrapper {
+	margin: 0 auto;
+	width: 960px;
+}
+
+/* ------------------------------------------------ */
+/* 3.ヘッダー
+/* ------------------------------------------------ */
+
+/* エリア外枠のスタイル */
+header {
+	padding-top: 15px;
+	padding-bottom: 25px;
+}
+
+/* 見出しのスタイル */
+h1 {
+	color: #999999;
+	font-size: 12px;
+	font-weight: normal;
+	margin-bottom: 15px;
+}
+
+/* ロゴのスタイル */
+#header-logo img {
+	width: 300px;
+	height: 60px;
+}
+
+/* ------------------------------------------------ */
+/* 4.グローバルナビゲーション
+/* ------------------------------------------------ */
+
+/* エリア外枠のスタイル */
+#gNav {
+	margin-bottom: 25px;
+}
+
+/* メニューリストを囲む枠 */
+#gNav ul {
+	display: -webkit-flex;	/* safari用 */
+	display: flex;
+}
+
+/* メニューリストの共通スタイル */
+#gNav li {
+	border-left: 1px solid #7dceec;
+	height: 45px;
+	text-align: center;
+	width: 25%;
+}
+
+/* 一番右のメニューリストのスタイル */
+#gNav li:last-child {
+	border-right: 1px solid #7dceec;
+}
+
+/* メニューのリンクスタイル */
+#gNav a {
+	color: #4d4d4d;
+	display: block;
+	font-size: 11px;
+	line-height: 2;
+	height: 45px;
+	text-decoration: none;
+}
+
+/* メニューにマウスを乗せたときのスタイル */
+#gNav a:hover {
+	background-color: #BDF5FE;
+}
+
+/* メニューの英文字スタイル */
+#gNav a span {
+	color: #007de1;
+	display: block;
+	font-family: arial;
+	font-size: 10px;
+}
+
+/* 現在ページのメニュースタイル */
+#gNav .current-menu-item a, #gNav .current-menu-item a span {
+	background-color: #2AA8E5;
+	color: #ffffff;
+}
+
+/* ------------------------------------------------ */
+/* 5.コンテンツ
+/* ------------------------------------------------ */
+
+/* エリア外枠のスタイル */
+#contents {
+	margin-bottom: 60px;
+}
+
+/* エリア内枠のスタイル */
+#contents .inner {
+	margin-bottom: 25px;
+}
+
+/* 中見出し */
+h2 {
+	background-color: #2AA8E5;
+	color: #ffffff;
+	font-size: 18px;
+	margin-bottom: 25px;
+	padding: 0.5em 1em;
+}
+
+/* 小見出し */
+h3 {
+	border: 1px solid #eeeeee;
+	border-radius: 4px;
+	box-shadow: 1px 1px 1px #999999;
+	font-weight: bold;
+	margin-bottom: 25px;
+	padding: 0.2em 1em;
+}
+
+/* 事業内容のボックス */
+.biz-box {
+	padding: 0 25px;
+	margin-bottom: 40px;
+}
+
+/* 事業内容の見出し */
+.biz-box h3 {
+	text-align: center;
+}
+
+/* 事業内容の画像 */
+.biz-box img {
+	margin-bottom: 25px;
+	width: 100%;
+}
+
+/* ------------------------------------------------ */
+/* 6.フッター
+/* ------------------------------------------------ */
+
+/* エリア外枠のスタイル */
+footer {
+	background: #2AA8E5;
+	color: #ffffff;
+	padding: 25px;
+	display: -webkit-flex;	/* safari用 */
+	display: flex;
+}
+
+/* エリア左側のボックス */
+#footer-left {
+	width: 300px;
+}
+
+/* エリア右側のボックス */
+#footer-right {
+	width: 610px;
+}
+
+/* ロゴ */
+#footer-logo img {
+	margin-bottom: 15px;
+	width: 230px;
+	height: 40px;
+}
+
+/* 会社所在地 */
+#address {
+	font-size: 12px;
+}
+
+/* 著作権表記 */
+#copyright {
+	text-align: right;
+	display: block;
+}
+
+/* ------------------------------------------------ */
+/* 7.フッターナビゲーション
+/* ------------------------------------------------ */
+
+/* エリア外枠のスタイル */
+#fNav {
+	margin-bottom: 30px;
+}
+
+/* メニューリストを囲む枠 */
+#fNav ul {
+	display: -webkit-flex;	/* safari用 */
+	display: flex;
+	width: 518px;
+	margin-left: auto;
+}
+
+/* メニューリストの共通スタイル */
+#fNav li {
+	padding: 0 15px;
+	border-right: 1px solid #ffffff;
+}
+
+/* 一番最後のメニュー */
+#fNav li:last-child {
+	border-right: none;
+	padding-right: 0;
+}
+
+/* メニューリンクの共通スタイル */
+#fNav a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* メニューリンクにマウスを乗せたときのスタイル */
+#fNav a:hover {
+	background-color: #ffffff;
+	color: #2AA8E5;
+	opacity: 1;
+}
+
+/* ------------------------------------------------ */
+/* 8.トップページ専用スタイル
+/* ------------------------------------------------ */
+
+/* メインビジュアル */
+#main_visual {
+	width: 100%;
+}
+
+/* 新着情報のリスト */
+#news li {
+	border-bottom: 1px dotted #aaaaaa;
+	padding: 0.2em;
+}
+
+/* 事業内容の枠 */
+#our-business {
+	display: -webkit-flex;		/* safari用 */
+	display: flex;
+	-webkit-flex-wrap: wrap;	/* safari用 */
+	flex-wrap: wrap;
+}
+
+/* ------------------------------------------------ */
+/* 9.事業内容ページ専用スタイル
+/* ------------------------------------------------ */
+
+/* ------------------------------------------------ */
+/* 10.会社概要ページ専用スタイル
+/* ------------------------------------------------ */
+
+/* 会社概要のテーブル */
+#company-prof {
+	margin: 0 auto;
+	width: 80%;
+}
+
+/* 会社概要のテーブルセル */
+#company-prof th ,#company-prof td {
+	border: 1px solid #2AA8E5;
+	padding: 1em;
+}
+
+/* 会社概要の見出しセル */
+#company-prof th {
+	white-space: nowrap;
+	background-color: #2AA8E5;
+	color: #ffffff;
+	border-bottom: 1px solid #ffffff;
+}
+
+/* 最終行の見出しセルの境界線を着色 */
+#company-prof tr:last-child th {
+	border-bottom: 1px solid #2AA8E5;
+}
+
+/* ------------------------------------------------ */
+/* 11.プライバシーポリシーページ専用スタイル
+/* ------------------------------------------------ */
+
+/* プライバシーポリシーのリスト枠 */
+#our-policy ol {
+	margin-bottom: 25px;
+}
+
+/* プライバシーポリシーのリスト */
+#our-policy li {
+	list-style: decimal inside;
+}
+
+/* ------------------------------------------------ */
+/* 12.お問い合わせページ専用スタイル
+/* ------------------------------------------------ */
+
+/* お問い合わせフォームのフレーム */
+#mail-form iframe {
+	width: 100%;
+	height: 1100px;
+}
+
+/* ------------------------------------------------ */
+/* レスポンシブ（768px以上のタブレット/PC）
+/* ------------------------------------------------ */
+@media only screen and (min-width:768px) {
+
+	/* ------------------------------------------------ */
+	/* 1.共通
+	/* ------------------------------------------------ */
+
+	/* PC専用コンテンツを表示 */
+	.pc {
+		display: block;
+	}
+
+	/* スマホ専用コンテンツを非表示 */
+	.sp {
+		display: none;
+	}
+}
+
+/* ------------------------------------------------ */
+/* レスポンシブ（767px以下のスマホ）
+/* ------------------------------------------------ */
+@media only screen and (max-width:767px) {
+
+	/* ------------------------------------------------ */
+	/* 1.共通
+	/* ------------------------------------------------ */
+
+	/* PC専用コンテンツを非表示 */
+	.pc {
+		display: none;
+	}
+
+	/* スマホ専用コンテンツを表示 */
+	.sp {
+		display: block;
+	}
+
+	/* グリッド型のボックスを縦並びにする */
+	.col-4, .col-6, .col-8 {
+		display: block;
+		width: 100%;
+	}
+
+	/* ------------------------------------------------ */
+	/* 2.レイアウト
+	/* ------------------------------------------------ */
+
+	/* ページ全体を画面の横幅に合せる */
+	#wrapper {
+		width: 100%;
+	}
+
+	/* ------------------------------------------------ */
+	/* 3.ヘッダー
+	/* ------------------------------------------------ */
+
+	/* 見出しを非表示 */
+	h1 {
+		display: none;
+	}
+
+	/* ロゴを中央寄せ */
+	#header-logo {
+		text-align: center;
+	}
+
+	/* ------------------------------------------------ */
+	/* 4.グローバルナビゲーション
+	/* ------------------------------------------------ */
+
+	/* ------------------------------------------------ */
+	/* 5.コンテンツ
+	/* ------------------------------------------------ */
+
+	/* エリア内枠のスタイル */
+	#contents .inner {
+		padding: 0 0.5em;
+	}
+
+	/* 見出しを左右中央寄せ */
+	h2 {
+		text-align: center;
+		font-size: 16px;
+	}
+
+	/* 事業内容のボックス */
+	.biz-box {
+		padding: 0 0;
+	}
+
+	/* ------------------------------------------------ */
+	/* 6.フッター
+	/* ------------------------------------------------ */
+
+	/* エリアの外枠 */
+	footer {
+		display: block;
+		padding: 25px 10px;
+	}
+
+	/* エリア左側のボックス */
+	#footer-left {
+		margin-bottom: 15px;
+		text-align: center;
+		width: 100%;
+	}
+
+	/* エリア右側のボックス */
+	#footer-right {
+		width: 100%;
+	}
+
+	/* 著作権表記 */
+	#copyright {
+		text-align: center;
+		font-size: 12px;
+	}
+
+	/* ------------------------------------------------ */
+	/* 7.フッターナビゲーション
+	/* ------------------------------------------------ */
+
+	/* メニューを縦並びにする */
+	#fNav ul {
+		display: block;
+		width: 100%;
+	}
+
+	/* 各メニュー要素の装飾 */
+	#fNav li {
+		background-color: #ffffff;
+		margin-bottom: 1px;
+		position: relative;
+		padding: 10px;
+	}
+
+	/* 各メニューのリンク領域を枠いっぱいに広げて上下中央寄せ */
+	#fNav a {
+		color: #2AA8E5;
+		display: block;
+	}
+
+	/* 各メニュー右端のリンクボタン */
+	#fNav li:after {
+		background-color: #2AA8E5;
+		border: 2px solid #ffffff;
+		border-radius: 50%;
+		content: '>';
+		height: 20px;
+		line-height: 20px;
+		padding: 0;
+		position: absolute;
+		right: 7px;
+		top: 10px;
+		width: 20px;
+		text-align: center;
+	}
+
+	/* 一番最後のメニューにもリンクボタンをつける */
+	#fNav li:last-child:after {
+		content: '>';
+	}
+
+	/* ------------------------------------------------ */
+	/* 8.トップページ専用スタイル
+	/* ------------------------------------------------ */
+
+	/* メインビジュアル */
+	#contents .inner#main_visual {
+		padding: 0 0;
+	}
+
+	/* 事業内容 */
+	#our-business {
+		display: block;
+	}
+
+	/* ------------------------------------------------ */
+	/* 9.事業内容ページ専用スタイル
+	/* ------------------------------------------------ */
+
+	/* ------------------------------------------------ */
+	/* 10.会社概要ページ専用スタイル
+	/* ------------------------------------------------ */
+
+	/* 表を枠いっぱいに広げる */
+	#company-prof {
+		width: 100%;
+	}
+
+	/* 表の各セルをブロック要素に変更して縦並びにする */
+	#company-prof th,#company-prof td {
+		display: block;
+	}
+
+	/* 表の見出しセル */
+	#company-prof th {
+		border: 1px solid #eeeeee;
+		border-radius: 4px;
+		box-shadow: 1px 1px 1px #999999;
+		font-weight: bold;
+		padding: .2em 1em;
+		background-color: #ffffff;
+		color: initial;
+		text-align: left;
+	}
+
+	/* 最終行の見出しセルは境界線を表示する */
+	#company-prof tr:last-child th {
+		border-bottom: 1px solid #eeeeee;
+	}
+
+	/* 表のデータセルは境界線を表示しない */
+	#company-prof td {
+		border: none;
+	}
+
+	/* ------------------------------------------------ */
+	/* 11.プライバシーポリシーページ専用スタイル
+	/* ------------------------------------------------ */
+
+	/* ------------------------------------------------ */
+	/* 12.お問い合わせページ専用スタイル
+	/* ------------------------------------------------ */
+	
+}
